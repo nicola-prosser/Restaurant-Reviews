@@ -276,11 +276,8 @@ nav h1 a {
   padding-bottom: 1pt;
 }
 #reviews-list {
-  margin: 0;
   padding: 0;
-	/*display: flex;
-	flex-wrap: wrap;
-	justify-content: center;*/
+	padding-bottom: 50px;
 }
 #reviews-list li {
   background-color: #fff;
@@ -292,6 +289,7 @@ nav h1 a {
   padding: 10px 20px 20px;
   position: relative;
   width: 85%;
+
 }
 
 
@@ -299,7 +297,7 @@ nav h1 a {
   margin: 0 0 10px;
 }
 #restaurant-hours td {
-  color: #666;
+  color: #666;;
 }
 
 /*---- Media Queries -----*/
@@ -350,8 +348,13 @@ nav h1 a {
   }
 
 	#restaurant-hours td {
-	  justify-content: center;
-		align-self: center;
+	  text-align: left;
+		padding: 5px;
+	}
+
+	table {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
   .inside #map-container {
@@ -395,4 +398,9 @@ nav h1 a {
   #reviews-container h2 {
     text-align: center;
   }
+
+	#reviews-list li {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
