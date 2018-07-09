@@ -331,13 +331,16 @@ nav h1 a {
   .inside header {
     order: 0;
     width: 100vw;
+		z-index: 9999
   }
   header {
     display: flex;
     flex-direction: column;
+		z-index: 9999;
   }
   header nav {
     order: 0;
+		z-index: 9999
   }
   header #breadcrumb {
     order: 1;
@@ -345,6 +348,7 @@ nav h1 a {
     padding-right: 0;
     padding-left: 0;
     text-align: center;
+		z-index: 9999
   }
 
 	#restaurant-hours td {
