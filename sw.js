@@ -1,6 +1,9 @@
 self.addEventListener('install', function(event) {
+  //perform install steps
   event.waitUntil(
+    //wait until the following is cached - then install is complete
     caches.open('static-v1').then(function(cache) {
+      //open the cache add all elements below
       return cache.addAll([
         './',
         './index.html',
@@ -24,8 +27,12 @@ self.addEventListener('install', function(event) {
   );
 });
 
+//fetch the cache when required
 self.addEventListener('fetch',function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
+  event.respondWith(
+    //reposind to the request with the following
+    caches.match(event.request)
+    .then(function(response) {
     return response || fetch(event.request).then(function (response) {
       return caches.open('static-v1').then(function (cache) {
         cache.put(event.request, response.clone());
